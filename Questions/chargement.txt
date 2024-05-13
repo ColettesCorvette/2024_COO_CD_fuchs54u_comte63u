@@ -1,0 +1,6 @@
+La méthode main static de la classe chargeur magasin commence par initialiser un chargeur de l	a classe :
+ChargeurMagasin puis va  appeler la méthode chargerMagasin de chargeur. Ce chargeur va intialisaser 
+à son tour magasin de la classe magasin. Ensuite le chargeur va intialiser chargeCd1 de la classe 
+chargeurCDD puis va appeler la méthode chargerCD de chageurCd1. Cette méthode initalise cd1 de la classe 
+CD puis va appeler dans l’odre les méthode de cd1 : extrairePiste(), ajouterPiste(), extrairePiste(), 
+ajouterPiste(). Après cette méthode le chargeur utilise la méthodee ajouteCD(cd1) du magasin.
