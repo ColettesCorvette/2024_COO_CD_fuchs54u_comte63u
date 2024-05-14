@@ -24,17 +24,15 @@ public class MainChargeurMagasin {
 		String repertoire = "musicbrainzSimple/";
 		ChargeurMagasin charge = new ChargeurMagasin(repertoire);
 		Magasin resultat = charge.chargerMagasin();
-		System.out.println(resultat);
+		//System.out.println(resultat);
 		Scanner sc = new Scanner(System.in);
 		sc.nextLine();
 		sc.close();
-		/** 
 		resultat.trierAriste();
 		System.out.println(resultat);
 
 		resultat.trierAlbum();
-		System.out.println(resultat);
-		**/
+		//System.out.println(resultat);
 	}
 
 }
