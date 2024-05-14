@@ -16,7 +16,7 @@ import java.util.List;
  * Cette classe est utilisee par le magasin qui rassemble une liste de CDs.
  * 
  */
-public class CD {
+public class CD implements compareTo {
 
 	/**
 	 * constante pour definir comment afficher une separation entre les elements
@@ -97,5 +97,4 @@ public class CD {
 		return (resultat);
 	}
 
-	// TODO 
 }
