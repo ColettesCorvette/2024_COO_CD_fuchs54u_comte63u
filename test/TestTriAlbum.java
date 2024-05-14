@@ -20,9 +20,23 @@ class TestTriAlbum {
 
         resultat.trierAlbum();
 
-        assertEquals(resultat.getCd(0).getNomArtiste(),"Believe");
+        assertEquals(resultat.getCd(0).getNomCD(),"Believe");
+        assertEquals(resultat.getCd(1).getNomCD(), "Bénabar");
+        assertEquals(resultat.getCd(2).getNomCD(), "Demon Days");
+
+    }
+    @Test
+    public void testTriArtiste() throws FileNotFoundException {
+
+        String repertoire = "musicbrainzSimple/";
+        ChargeurMagasin charge = new ChargeurMagasin(repertoire);
+        Magasin resultat = charge.chargerMagasin();
+
+        resultat.trierAriste();
+
+        assertEquals(resultat.getCd(0).getNomArtiste(),"Bénabar");
         assertEquals(resultat.getCd(1).getNomArtiste(), "Bénabar");
-        assertEquals(resultat.getCd(2).getNomArtiste(), "Demon Days");
+        assertEquals(resultat.getCd(2).getNomArtiste(), "Céline Dion");
 
     }
 
