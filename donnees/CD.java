@@ -50,6 +50,16 @@ public class CD {
 		this.pistes = new ArrayList<InfoPiste>();
 	}
 
+	public String getNomArtiste()
+	{
+		return this.nomArtiste;
+	}
+
+	public String getNomCD()
+	{
+		return this.nomCD;
+	}
+
 	/**
 	 * ajoute une piste en fin de CD
 	 * 
