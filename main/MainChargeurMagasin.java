@@ -24,14 +24,7 @@ public class MainChargeurMagasin {
 		String repertoire = "musicbrainzSimple/";
 		ChargeurMagasin charge = new ChargeurMagasin(repertoire);
 		Magasin resultat = charge.chargerMagasin();
-		resultat.trier(new CompareTitre());
-		System.out.println(resultat);
-
-
 		resultat.trier(new ComparateurNombre());
 		System.out.println(resultat);
-
-
-
 	}
 }
