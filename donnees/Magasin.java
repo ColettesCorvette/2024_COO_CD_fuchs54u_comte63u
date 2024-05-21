@@ -67,24 +67,11 @@ public class Magasin {
 			res=this.listeCds.get(i);
 		return(res);
 	}
-	public void trierAlbum()
+	public void trier(ComparateurCD comp)
 	{
 		for (int i = 0; i < listeCds.size(); i++) {
 			for (int j = i+1; j < listeCds.size(); j++) {
-				if (listeCds.get(i).ComparTitre(listeCds.get(j))>0)
-				{
-					CD temp = listeCds.get(i);
-					listeCds.set(i, listeCds.get(j));
-					listeCds.set(j, temp);
-				}
-			}
-		}
-	}
-	public void trierAriste()
-	{
-		for (int i = 0; i < listeCds.size(); i++) {
-			for (int j = i+1; j < listeCds.size(); j++) {
-				if (listeCds.get(i).ComparArtiste(listeCds.get(j))>0)
+				if (comp.etreAvant(listeCds.get(j), listeCds.get(i)))
 				{
 					CD temp = listeCds.get(i);
 					listeCds.set(i, listeCds.get(j));

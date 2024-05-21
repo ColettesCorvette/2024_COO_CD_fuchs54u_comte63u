@@ -1,6 +1,8 @@
 package test;
 
 import XML.ChargeurMagasin;
+import donnees.CompareCD;
+import donnees.CompareTitre;
 import donnees.Magasin;
 import org.junit.jupiter.api.Test;
 
@@ -17,7 +19,7 @@ class TestTriAlbum {
         ChargeurMagasin charge = new ChargeurMagasin(repertoire);
         Magasin resultat = charge.chargerMagasin();
 
-        resultat.trierAlbum();
+        resultat.trier(new CompareCD());
 
         assertEquals(resultat.getCd(0).getNomCD(),"Believe");
         assertEquals(resultat.getCd(1).getNomCD(), "Bénabar");
@@ -31,12 +33,9 @@ class TestTriAlbum {
         ChargeurMagasin charge = new ChargeurMagasin(repertoire);
         Magasin resultat = charge.chargerMagasin();
 
-        resultat.trierAriste();
-
+        resultat.trier(new CompareTitre());
         assertEquals(resultat.getCd(0).getNomArtiste(),"Bénabar");
         assertEquals(resultat.getCd(1).getNomArtiste(), "Bénabar");
         assertEquals(resultat.getCd(2).getNomArtiste(), "Céline Dion");
-
     }
-
 }

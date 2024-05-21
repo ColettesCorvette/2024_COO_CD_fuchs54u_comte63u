@@ -1,6 +1,7 @@
 package main;
 
 import java.io.IOException;
+import donnees.CompareTitre;
 import donnees.Magasin;
 import XML.ChargeurMagasin;
 
@@ -21,9 +22,7 @@ public class MainChargeurMagasin {
 		String repertoire = "musicbrainzSimple/";
 		ChargeurMagasin charge = new ChargeurMagasin(repertoire);
 		Magasin resultat = charge.chargerMagasin();
-		//System.out.println(resultat);
-		resultat.trierAriste();
+		resultat.trier(new CompareTitre());
 		System.out.println(resultat);
-		resultat.trierAlbum();
 	}
 }
