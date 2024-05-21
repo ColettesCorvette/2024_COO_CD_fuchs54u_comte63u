@@ -106,5 +106,10 @@ public class CD {
 			resultat = "0" + resultat;
 		return (resultat);
 	}
+
+	public int getNbPistes()
+	{
+		return this.pistes.size();
+	}
 	
 }

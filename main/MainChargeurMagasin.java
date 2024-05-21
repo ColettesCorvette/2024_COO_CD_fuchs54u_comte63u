@@ -1,6 +1,8 @@
 package main;
 
 import java.io.IOException;
+
+import donnees.ComparateurNombre;
 import donnees.CompareTitre;
 import donnees.Magasin;
 import XML.ChargeurMagasin;
@@ -24,5 +26,12 @@ public class MainChargeurMagasin {
 		Magasin resultat = charge.chargerMagasin();
 		resultat.trier(new CompareTitre());
 		System.out.println(resultat);
+
+
+		resultat.trier(new ComparateurNombre());
+		System.out.println(resultat);
+
+
+
 	}
 }
