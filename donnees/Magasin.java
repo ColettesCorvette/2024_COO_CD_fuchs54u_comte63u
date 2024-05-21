@@ -80,4 +80,12 @@ public class Magasin {
 			}
 		}
 	}
+	public ArrayList<CD> chercher(Selecteur selec){
+		ArrayList<CD> res = new ArrayList<CD>();
+		for (CD cd : listeCds) {
+			if(selec.garder(cd))
+				res.add(cd);
+		}
+		return res;
+	}
 }
