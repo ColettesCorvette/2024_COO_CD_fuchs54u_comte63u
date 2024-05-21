@@ -1,7 +1,6 @@
 package test;
 
 import XML.ChargeurMagasin;
-import donnees.CD;
 import donnees.Magasin;
 import org.junit.jupiter.api.Test;
 

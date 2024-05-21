@@ -7,7 +7,7 @@ import donnees.Magasin;
 public class testChargerMagasin {
     // testChargerMagasin valide
     @Test
-    public void testChargerMagasin()  {
+    public void testChargerMagasinMethod()  {
         try{
             String repertoire = "musicbrainzSimple/";
             ChargeurMagasin charge = new ChargeurMagasin(repertoire);
@@ -19,7 +19,7 @@ public class testChargerMagasin {
         }
     }
     public void lancerTests(){
-        testChargerMagasin();
+        testChargerMagasinMethod();
     }
     @Test
     // testChargerMagasin invalide
