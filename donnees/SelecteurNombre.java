@@ -1,6 +1,6 @@
 package donnees;
 
-public class SelecteurNombre
+public class SelecteurNombre implements Selecteur
 {
 
     private int nbPistes;

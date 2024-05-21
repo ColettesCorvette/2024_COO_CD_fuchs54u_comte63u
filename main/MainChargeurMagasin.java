@@ -1,10 +1,12 @@
 package main;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
-import donnees.ComparateurNombre;
-import donnees.CompareTitre;
+import donnees.CD;
 import donnees.Magasin;
+import donnees.SelecteurArtiste;
+import donnees.SelecteurNombre;
 import XML.ChargeurMagasin;
 
 /**
@@ -24,7 +26,9 @@ public class MainChargeurMagasin {
 		String repertoire = "musicbrainzSimple/";
 		ChargeurMagasin charge = new ChargeurMagasin(repertoire);
 		Magasin resultat = charge.chargerMagasin();
-		resultat.trier(new ComparateurNombre());
-		System.out.println(resultat);
+		ArrayList<CD> res = resultat.chercher(new SelecteurNombre(15));
+		//System.out.println(res);
+		res = resultat.chercher(new SelecteurArtiste("Bénabar"));
+		System.out.println(res);
 	}
 }
